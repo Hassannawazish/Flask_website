@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>Here is a list of all availale Suggestions:</h1>
+        <ul>
+            {% for i in suggest %}
+            <li>{{i.id}}{{".    "}}{{i}}{{ "Suggested by" }}{{username[i]}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
